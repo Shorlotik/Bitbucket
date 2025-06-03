@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  rail-ninja-cli:
+    build: .
+    environment:
+      - RAIL_NINJA_API_KEY=${RAIL_NINJA_API_KEY}
+    volumes:
+      - ./output:/app/output
+    stdin_open: true
+    tty: true
